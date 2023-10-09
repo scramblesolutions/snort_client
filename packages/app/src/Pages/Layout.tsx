@@ -93,7 +93,7 @@ const NoteCreatorButton = () => {
   );
 };
 
-const AccountHeader = () => {
+export const AccountHeader = () => {
   const navigate = useNavigate();
   const { formatMessage } = useIntl();
 
@@ -203,7 +203,7 @@ const AccountHeader = () => {
   );
 };
 
-function LogoHeader() {
+export function LogoHeader() {
   const { subscriptions } = useLogin();
   const currentSubscription = getCurrentSubscription(subscriptions);
 

@@ -1,0 +1,41 @@
+.create-offer h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.create-offer h3 {
+  margin: 0;
+  color: var(--font-secondary-color);
+  font-size: 11px;
+  letter-spacing: 0.11em;
+  font-weight: 600;
+  line-height: 13px;
+  text-transform: uppercase;
+}
+
+.create-offer .premium {
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid;
+    overflow: hidden;
+}
+
+.create-offer .premium>div {
+    flex: 1;
+    text-align: center;
+    padding: 10px 4px;
+    cursor: pointer;
+}
+
+.create-offer .premium>div:nth-of-type(1) {
+    min-width: 2em;
+}
+.create-offer .premium>div:nth-of-type(2) {
+    background-color: var(--success);
+}
+
+.create-offer .premium>div:nth-of-type(3) {
+    background-color: var(--error);
+}

@@ -46,6 +46,7 @@ import { preload, RelayMetrics, UserCache, UserRelays } from "Cache";
 import { LoginStore } from "Login";
 import { SnortDeckLayout } from "Pages/DeckLayout";
 import FreeNostrAddressPage from "./Pages/FreeNostrAddressPage";
+import { TradingRoutes } from "Pages/trading";
 
 const WasmQueryOptimizer = {
   expandFilter: (f: ReqFilter) => {
@@ -191,6 +192,7 @@ export const router = createBrowserRouter([
       ...NewUserRoutes,
       ...WalletRoutes,
       ...SubscribeRoutes,
+      ...TradingRoutes,
       {
         path: "/debug",
         element: <DebugPage />,
@@ -204,6 +206,7 @@ export const router = createBrowserRouter([
   {
     path: "/deck",
     element: <SnortDeckLayout />,
+    children: RootTabRoutes,
     loader: async () => {
       if (!didInit) {
         didInit = true;
@@ -211,8 +214,7 @@ export const router = createBrowserRouter([
       }
       return null;
     },
-    children: RootTabRoutes,
-  },
+  }
 ]);
 
 const root = ReactDOM.createRoot(unwrap(document.getElementById("root")));
