@@ -1,3 +1,6 @@
+COPY .gitmodules .gitmodules
+RUN git submodule update --init --recursive
+
 FROM node:current AS build
 WORKDIR /src
 RUN apt update \
