@@ -2,6 +2,7 @@ COPY .gitmodules .gitmodules
 RUN git submodule update --init --recursive
 
 RUN [ -f ".gitmodules" ] && sed -i 's/original/replacement/g' .gitmodules || echo ".gitmodules not found, skipping sed"
+RUN pwd && git submodule update --init --recursive
 
 FROM node:current AS build
 WORKDIR /src
