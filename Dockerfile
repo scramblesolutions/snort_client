@@ -1,4 +1,4 @@
-FROM node:current as build
+FROM node:18 AS build
 WORKDIR /src
 RUN apt update \
     && apt install -y --no-install-recommends git \
