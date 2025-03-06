@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "src/index.ts",
   "types": "dist/index.d.ts",
-  "repository": "https://git.v0l.io/Kieran/snort",
+  "repository": "https://github.com/scramblesolutions/snort_client",
   "author": "Kieran",
   "license": "MIT",
   "scripts": {
